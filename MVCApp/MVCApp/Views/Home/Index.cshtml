@@ -1,0 +1,32 @@
+﻿@model MVCApp.Models.UsersViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Active</th>
+        </tr>
+
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.ID</td>
+                <td>@user.FirstName, @user.LastName</td>
+                <td>@user.Phone</td>
+                <td>@user.EmailAddress</td>
+                <td>@Html.CheckBox("Active", user.Active )</td>
+            </tr>
+        }
+    </thead>
+
+
+</table>
