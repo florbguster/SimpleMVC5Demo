@@ -1,36 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using MVCApp.DomainObjects;
+using System.Collections.Generic;
 
 namespace MVCApp.Models
 {
-    public class UsersViewModel
+    public class PlayerModel
     {
-        public UsersViewModel()
+        public PlayerModel()
         {
             this.Users = GenerateUsers();
         }
 
-        public List<User> Users { get; set; }
+        public List<Player> Users { get; set; }
 
-        private List<User> GenerateUsers()
+        private List<Player> GenerateUsers()
         {
-            List<User> users = new List<User> { 
-                new User{
+            List<Player> users = new List<Player> { 
+                new Player{
                     ID = 1,
                     FirstName = "Diego",
                     LastName = "Maradona",
                     Phone = "7201231244",
                     EmailAddress = "Maradona1@test.com",
-                    Active = true
+                    Active = false
                 },
-                new User{
+                new Player{
                     ID = 2,
                     FirstName = "Christiano",
                     LastName = "Ronaldo",
                     Phone = "5551114466",
                     EmailAddress = "ronaldo@msn.com",
-                    Active = false
+                    Active = true
                 },
-                new User{
+                new Player{
                     ID = 3,
                     FirstName = "Roberto",
                     LastName = "Carlos",
@@ -38,23 +39,23 @@ namespace MVCApp.Models
                     EmailAddress = "dummydata@yahoo.com",
                     Active = false
                 },
-                new User{
+                new Player{
                     ID = 4,
                     FirstName = "Alessandro",
                     LastName = "DelPiero",
                     Phone = "6665554411",
                     EmailAddress = "DelPiero@outlook.com",
-                    Active = true
+                    Active = false
                 },
-                new User{
+                new Player{
                     ID = 5,
                     FirstName = "Zinedin",
                     LastName = "Zidane",
                     Phone = "4441112233",
                     EmailAddress = "Zidane@yahoo.com",
-                    Active = true
+                    Active = false
                 },
-                new User{
+                new Player{
                     ID = 6,
                     FirstName = "Xavier",
                     LastName = "Barthez",
@@ -62,29 +63,29 @@ namespace MVCApp.Models
                     EmailAddress = "Barthez@aol.com",
                     Active = false
                 },
-                new User{
+                new Player{
                     ID = 7,
-                    FirstName = "Anton",
-                    LastName = "Pavlov",
+                    FirstName = "Neymar",
+                    LastName = "Da Silva Santos",
                     Phone = "8887774455",
-                    EmailAddress = "Pavlov@aol.com",
+                    EmailAddress = "Neymar145@aol.com",
                     Active = false
                 },
-                new User{
+                new Player{
                     ID = 8,
-                    FirstName = "Marcus",
-                    LastName = "Platoff",
+                    FirstName = "Zlatan",
+                    LastName = "Ibrahimovic",
                     Phone = "8887774455",
-                    EmailAddress = "PlatoffMarcus@aol.com",
-                    Active = false
+                    EmailAddress = "Zlatan@aol.com",
+                    Active = true
                 },
-                new User{
+                new Player{
                     ID = 9,
-                    FirstName = "Abraham",
-                    LastName = "Kaffka",
+                    FirstName = "Ricardo",
+                    LastName = "Kaka",
                     Phone = "8887774455",
-                    EmailAddress = "Kaffka@aol.com",
-                    Active = false
+                    EmailAddress = "kaka123@aol.com",
+                    Active = true
                 },
             };
             return users;

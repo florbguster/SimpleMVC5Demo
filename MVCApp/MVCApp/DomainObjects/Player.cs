@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
+using System.Text.RegularExpressions;
 
-namespace MVCApp.Models
+namespace MVCApp.DomainObjects
 {
-    public class User
+    public class Player : Individual
     {
-        [DisplayName("User ID")]
-        public int ID { get; set; }
+        private string _phone;
 
         [DisplayName("First Name")]
         public string FirstName { get; set; }
@@ -14,7 +14,14 @@ namespace MVCApp.Models
         public string LastName { get; set; }
 
         [DisplayName("Phone")]
-        public string Phone { get; set; }
+        public string Phone
+        {
+            get
+            {
+                return Regex.Replace(_phone, ".*?(\\d{3}).*?(\\d{3}).*?(\\d{4}).*?", "($1) $2-$3");
+            }
+            set { _phone = value; }
+        }
 
         [DisplayName("Email Address")]
         public string EmailAddress { get; set; }

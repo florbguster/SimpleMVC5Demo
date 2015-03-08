@@ -5,10 +5,9 @@ namespace MVCApp.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
         public ActionResult Index()
         {
-            var model = new UsersViewModel();
+            var model = new PlayerModel();
 
             return View(model);
         }
